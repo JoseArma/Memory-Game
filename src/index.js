@@ -1,8 +1,15 @@
-const imagen1 = "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+const imagen1 = "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
 const imagen2 = "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
 const imagen3 = "https://rickandmortyapi.com/api/character/avatar/3.jpeg"
 const imagen4 = "https://rickandmortyapi.com/api/character/avatar/4.jpeg"
 const imagen5 = "https://rickandmortyapi.com/api/character/avatar/5.jpeg"
+const imagen6 = "https://rickandmortyapi.com/api/character/avatar/6.jpeg"
+const imagen7 = "https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+const imagen8 = "https://rickandmortyapi.com/api/character/avatar/8.jpeg"
+const imagen9 = "https://rickandmortyapi.com/api/character/avatar/9.jpeg"
+const imagen10 = "https://rickandmortyapi.com/api/character/avatar/10.jpeg"
+const imagen11 = "https://rickandmortyapi.com/api/character/avatar/11.jpeg"
+const imagen12 = "https://rickandmortyapi.com/api/character/avatar/12.jpeg"
 
 
 
@@ -54,19 +61,64 @@ const personajes = [{
         id: 5,
         name: 'morty',
         foto: imagen5
+    },
+    {
+        id: 5,
+        name: 'morty',
+        foto: imagen6
+    },
+    { //6
+        id: 6,
+        name: 'morty',
+        foto: imagen7
+    },
+    { //7
+        id: 7,
+        name: 'morty',
+        foto: imagen8
+    },
+    { //8
+        id: 9,
+        name: 'morty',
+        foto: imagen9
+    },
+    { //10
+        id: 10,
+        name: 'morty',
+        foto: imagen10
+    },
+    { //11
+        id: 11,
+        name: 'morty',
+        foto: imagen11
+    },
+    { //11
+        id: 12,
+        name: 'morty',
+        foto: imagen12
     }
 ]
 
-function insertImg() {
-    let element = document.createElement("img")
-    element.setAttribute("src", "https://rickandmortyapi.com/api/character/avatar/2.jpeg")
-    padre.insertBefore(element, reference)
+
+
+
+
+function insertAllImg() {
+    for (var i = 0; i <= 11; i++) {
+        let element = document.createElement("img")
+        element.setAttribute("src", `${personajes[i].foto}`)
+        element.setAttribute("class", "action-game")
+        padre.insertBefore(element, reference)
+            /*   padre.innerHTML = "<a><img src="`${personajes[i].foto}`"></a>" */
+
+
+    }
+    playGame.setAttribute("class", "hiden")
 }
 
+playGame.addEventListener("click", insertAllImg)
 
 
-
-playGame.addEventListener("click", insertImg)
 
 
 
