@@ -1,12 +1,16 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Coda Caption', sans-serif;
+    /* background-image: url(https://lh3.googleusercontent.com/THOheTHKI71S4y3quSLOZf8qReHzsfiZcj3LijTENqRj2xb8Qz7lCc5aklqOKXod0bKC=h1024-no-tmp_rick_and_morty_wallpaper_hd_4k_apk.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
 
 .main-section {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-auto-flow: column;
 }
 
@@ -28,9 +32,9 @@ a {
 }
 
 img {
-    width: 160px;
     margin: 0 auto;
     padding-bottom: 15px;
+    height: 120px;
 }
 
 .card-content {
