@@ -29,31 +29,138 @@ const card12 = document.getElementById('card-img12')
 const padre = document.getElementById('sectionMain')
 const reference = document.getElementsByClassName('div')[0]
 
-
-
-
 const play = document.getElementById('playGame')
 
+const character = [{
+        id: "obj1",
+        name: 'rick',
+        foto: cardPhoto1
+    }, //1
+    {
+        id: "obj2",
+        name: 'morty',
+        foto: cardPhoto2
+    }, //2
+    {
+        id: "obj3",
+        name: 'morty',
+        foto: cardPhoto3
 
-const cards = [cardPhoto1, cardPhoto2, cardPhoto3, cardPhoto4, cardPhoto5, cardPhoto6, cardPhoto7, cardPhoto8, cardPhoto9, cardPhoto10, cardPhoto1, cardPhoto2, cardPhoto3, cardPhoto4, cardPhoto5, cardPhoto6, cardPhoto7, cardPhoto8, cardPhoto9, cardPhoto10, ]
+    }, //3
+    {
+        id: "obj4",
+        name: 'morty',
+        foto: cardPhoto4
+    }, //4
+    {
+        id: "obj5",
+        name: 'morty',
+        foto: cardPhoto5
+    },
+    {
+        id: "obj5",
+        name: 'morty',
+        foto: cardPhoto6
+    },
+    { //6
+        id: "obj6",
+        name: 'morty',
+        foto: cardPhoto7
+    },
+    { //7
+        id: "obj7",
+        name: 'morty',
+        foto: cardPhoto8
+    },
+    { //8
+        id: "obj9",
+        name: 'morty',
+        foto: cardPhoto9
+    },
+    { //10
+        id: "obj10",
+        name: 'morty',
+        foto: cardPhoto10
+    },
+    { //1
+        id: "obj1",
+        name: 'morty',
+        foto: cardPhoto1
+    },
+    { //2
+        id: "obj2",
+        name: 'morty',
+        foto: cardPhoto2
+    },
+    { //3
+        id: "obj3",
+        name: 'morty',
+        foto: cardPhoto3
+    },
+    { //4
+        id: "obj4",
+        name: 'morty',
+        foto: cardPhoto4
+    },
+    { //5
+        id: "obj5",
+        name: 'morty',
+        foto: cardPhoto5
+    },
+    { //6
+        id: "obj6",
+        name: 'morty',
+        foto: cardPhoto6
+    },
+    { //7
+        id: "obj7",
+        name: 'morty',
+        foto: cardPhoto7
+    },
+    { //8
+        id: "obj8",
+        name: 'morty',
+        foto: cardPhoto8
+    },
+    { //9
+        id: "obj9",
+        name: 'morty',
+        foto: cardPhoto9
+    },
+    { //10
+        id: "obj1",
+        name: 'morty',
+        foto: cardPhoto10
+    },
+]
+
 
 
 function insertAllImg() {
     var j, x, i;
-    for (i = cards.length - 1; i > 0; i--) {
+    for (i = character.length - 1; i > 0; i--) {
         j = Math.floor(Math.random() * (i + 1));
-        x = cards[i];
-        cards[i] = cards[j];
-        cards[j] = x;
+        x = character[i];
+        character[i] = character[j];
+        character[j] = x;
     }
     for (var i = 0; i <= 19; i++) {
-        let element = document.createElement("img")
-        element.setAttribute("src", `${cards[i]}`)
-        element.setAttribute("class", "action-game")
+        const element = document.createElement("img")
+        element.setAttribute("src", `${character[i].foto}`)
+        element.setAttribute("class", "uknowCard")
+        element.setAttribute("id", `${character[i].id}`)
         padre.insertBefore(element, reference)
+
+        function teste() {
+            if (element.classList.contains('uknowCard')) {
+                element.classList.remove('uknowCard')
+            }
+        }
+
+        element.addEventListener("click", teste)
     }
     playGame.setAttribute("class", "hiden")
-}
 
+}
 
 playGame.addEventListener("click", insertAllImg)

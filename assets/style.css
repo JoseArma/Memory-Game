@@ -2,9 +2,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Coda Caption', sans-serif;
-    /* background-image: url(https://lh3.googleusercontent.com/THOheTHKI71S4y3quSLOZf8qReHzsfiZcj3LijTENqRj2xb8Qz7lCc5aklqOKXod0bKC=h1024-no-tmp_rick_and_morty_wallpaper_hd_4k_apk.jpg);
+    /* background:  ; */
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
 }
 
 .main-section {
@@ -47,6 +47,12 @@ img {
     display: none;
 }
 
-.action-game {
+.uknowCard {
     cursor: pointer;
+    content: url(https://th.bing.com/th/id/R874ef0d7a53f4ecb3bf9af116e4b31f0?rik=mmAQjIxg8QBFVA&pid=ImgRaw);
 }
+
+
+/* .start-game {
+    cursor: pointer;
+} */
