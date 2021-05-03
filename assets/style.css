@@ -52,7 +52,18 @@ img {
     content: url(https://th.bing.com/th/id/R874ef0d7a53f4ecb3bf9af116e4b31f0?rik=mmAQjIxg8QBFVA&pid=ImgRaw);
 }
 
-
-/* .start-game {
+.testingGame {
     cursor: pointer;
-} */
+}
+
+.destapar {
+    background-image: url('https://th.bing.com/th/id/R874ef0d7a53f4ecb3bf9af116e4b31f0?rik=mmAQjIxg8QBFVA&pid=ImgRaw');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(360deg);
+}
+
+.cartaEquivocada {
+    transform: rotate(-720deg);
+}
