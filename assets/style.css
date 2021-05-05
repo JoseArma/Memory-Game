@@ -1,10 +1,9 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Coda Caption', sans-serif;
-    /* background:  ; */
+    background-image: url(https://i.imgur.com/TwezcHO.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    /*  overflow: hidden; */
 }
 
 .main-section {
@@ -17,6 +16,8 @@ body {
 .title {
     display: flex;
     justify-content: center;
+    font-family: 'Coda Caption', sans-serif;
+    color: white;
 }
 
 .img-card,
@@ -56,14 +57,100 @@ img {
     cursor: pointer;
 }
 
-.destapar {
-    background-image: url('https://th.bing.com/th/id/R874ef0d7a53f4ecb3bf9af116e4b31f0?rik=mmAQjIxg8QBFVA&pid=ImgRaw');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transform: rotate(360deg);
+.start-game::before,
+.start-game::after {
+    position: absolute;
+    content: '';
+    -webkit-transition: all .5s;
+    transition: all .5s;
 }
 
-.cartaEquivocada {
-    transform: rotate(-720deg);
+.start-game {
+    display: inline-block;
+    padding: 20px 40px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 35%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    vertical-align: middle;
+    font-family: 'Rubik One', sans-serif;
+    text-decoration: none;
+    font-size: 4vw;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    background-color: #7954A1;
+}
+
+.start-game::before {
+    bottom: -15px;
+    height: 15px;
+    width: 100%;
+    left: 8px;
+    -webkit-transform: skewX(45deg);
+    transform: skewX(45deg);
+    background-color: #170B3B;
+}
+
+.start-game::after {
+    right: -15px;
+    height: 100%;
+    width: 15px;
+    bottom: -8px;
+    -webkit-transform: skewY(45deg);
+    transform: skewY(45deg);
+    background-color: #341948;
+}
+
+.start-game:active {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.start-game:active::before {
+    bottom: -5px;
+    height: 5px;
+    left: 3px;
+}
+
+.start-game:active::after {
+    right: -5px;
+    width: 5px;
+    bottom: -3px;
+}
+
+@media screen and (max-width: 1023px) {
+    .card-img {
+        height: 90px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .card-img {
+        width: 90px;
+        height: 85px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-section {
+        font-size: 24px;
+        border-radius: none;
+    }
+    main {
+        border-radius: none;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card-img {
+        height: 70px;
+        width: 60px;
+        margin: 2px;
+    }
+    .title {
+        text-align: center;
+    }
 }
